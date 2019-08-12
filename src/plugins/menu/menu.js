@@ -64,7 +64,9 @@ var componentName = "gcweb-menu",
 		}
 
 		// Add menu navigation instruction
-		subElm.previousElementSibling.setAttribute( "aria-label", i18nInstruction );
+		if ( subElm ) {
+			subElm.previousElementSibling.setAttribute( "aria-label", i18nInstruction );
+		}
 
 		// Identify that initialization has completed
 		wb.ready( $elm, componentName );
